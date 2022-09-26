@@ -28,7 +28,7 @@ curl --request POST \
   --url http://localhost:8080/api/clientes \
   --header 'Content-Type: application/json' \
   --data '{
-	"code":"1",
+	"code":"",
   "name":"William Patino",
   "id":"1716277874",
   "address":"Las Alondras",
