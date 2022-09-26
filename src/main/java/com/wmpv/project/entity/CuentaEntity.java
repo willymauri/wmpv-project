@@ -31,19 +31,19 @@ public class CuentaEntity implements Serializable {
     @Column(name = "id_cuenta", nullable = false)
     private Integer idCuenta;
 
-    @Column(name = "numero", nullable = false, length = 30)
+    @Column(name = "numero", nullable = true, length = 30)
     private String numero;
 
     @Basic
-    @Column(name = "tipo_cuenta", nullable = false, length = 1)
+    @Column(name = "tipo_cuenta", nullable = true, length = 1)
     private String tipoCuenta;
     
     @Basic
-    @Column(name = "estado", nullable = false, length = 1)
+    @Column(name = "estado", nullable = true, length = 1)
     private String estado;
     
     @Basic
-    @Column(name = "saldo_inicial", nullable = false, length = 1)
+    @Column(name = "saldo_inicial", nullable = true, length = 1)
     private BigDecimal saldoInicial;
     
     @ManyToOne(fetch = FetchType.EAGER)

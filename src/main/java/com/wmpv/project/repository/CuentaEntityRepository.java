@@ -17,6 +17,9 @@ import com.wmpv.project.exception.WsServiceException;
 @Repository
 public interface CuentaEntityRepository extends CrudRepository<CuentaEntity, Integer> {
 
+	@Query("select cs from CuentaEntity cs where cs.idCuenta = :id")
+	CuentaEntity findByCod(@Param("id")Integer id) throws WsServiceException ;
+	
 	@Query("select cs from CuentaEntity cs where cs.cliente.idCliente = :idCliente")
 	List<CuentaEntity> findByCliente(@Param("idCliente")Integer idCliente) throws WsServiceException ;
 }

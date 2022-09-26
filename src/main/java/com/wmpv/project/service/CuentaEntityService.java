@@ -10,6 +10,8 @@ import com.wmpv.project.exception.WsServiceException;
  * @autor william.patino
  **/
 public interface CuentaEntityService {
+	
+	CuentaEntity findByCod(Integer id) throws WsServiceException ;
 
 	List<CuentaEntity> findByCliente(Integer idCliente) throws WsServiceException ;
 

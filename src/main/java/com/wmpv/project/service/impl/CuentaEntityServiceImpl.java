@@ -9,6 +9,7 @@ import com.wmpv.project.entity.CuentaEntity;
 import com.wmpv.project.exception.WsServiceException;
 import com.wmpv.project.repository.CuentaEntityRepository;
 import com.wmpv.project.service.CuentaEntityService;
+import com.wmpv.project.util.Validate;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -51,6 +52,17 @@ public class CuentaEntityServiceImpl implements CuentaEntityService {
 			repository.delete(entity);
         } catch (Exception e) {
             throw new WsServiceException("Problema al eliminar cuenta por cliente: "+e.getMessage());
+        }
+	}
+
+	@Override
+	public CuentaEntity findByCod(Integer id) throws WsServiceException {
+		try {
+    		CuentaEntity tipo = repository.findByCod(id);
+    		Validate.notFound(tipo);
+    		return tipo;
+        } catch (Exception e) {
+            throw new WsServiceException("Problema consulta cuenta: "+id+" "+e.getMessage());
         }
 	}
 

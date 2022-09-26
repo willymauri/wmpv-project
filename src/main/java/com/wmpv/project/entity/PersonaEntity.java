@@ -26,19 +26,19 @@ public class PersonaEntity implements Serializable {
     @Column(name = "id_cliente", nullable = false)
     private Integer idCliente;
 
-    @Column(name = "identificacion", nullable = false, length = 10)
+    @Column(name = "identificacion", nullable = true, length = 10)
     private String identificacion;
 
     @Basic
-    @Column(name = "nombre", nullable = false, length = 50)
+    @Column(name = "nombre", nullable = true, length = 50)
     private String nombre;
 
     @Basic
-    @Column(name = "genero", nullable = false, length = 1)
+    @Column(name = "genero", nullable = true, length = 1)
     private String genero;
 
     @Basic
-    @Column(name = "direccion", nullable = false, length = 80)
+    @Column(name = "direccion", nullable = true, length = 80)
     private String direccion;
 
     @Basic

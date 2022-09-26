@@ -1,5 +1,6 @@
 package com.wmpv.project.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -17,8 +18,12 @@ public interface MovimientoEntityService {
 	Page<MovimientoEntity> findByCuenta(Pageable pageable, Integer idCuenta) throws WsServiceException ;
 	
 	List<MovimientoEntity> findByCuenta(Integer idCuenta) throws WsServiceException ;
+	
+	List<MovimientoEntity> findByDateCliente(Date init, Date end, String id) throws WsServiceException ;
 
-	void saveOrUpdate(MovimientoEntity entity) throws WsServiceException ;
+	void credito(MovimientoEntity entity) throws WsServiceException ;
+	
+	void debito(MovimientoEntity entity) throws WsServiceException ;
 	
 	void delete(MovimientoEntity entity) throws WsServiceException ;
 }
