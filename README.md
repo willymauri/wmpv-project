@@ -114,5 +114,5 @@ curl --request GET \
   
 ##Crear la base de datos en postgres 10, con las credenciales indicadas en el application.properties
 
-#Compilar el proyecto: /> mvn clean install
+#Compilar el proyecto (Java 11): /> mvn clean install
 ##Se puede porbar el servicio con click derecho en el proyecto "Run As/Spring Boot App"
